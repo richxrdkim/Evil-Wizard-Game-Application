@@ -1,8 +1,6 @@
 import random
 
-# ------------------------
 # Base Character Class
-# ------------------------
 
 
 class Character:
@@ -36,10 +34,8 @@ class Character:
     def display_stats(self):
         print(f"{self.name}'s Stats - Health: {self.health}/{self.max_health}, Attack Power: {self.attack_power}")
 
-# ------------------------
-# Warrior Class
-# ------------------------
 
+# Warrior Class
 
 class Warrior(Character):
     def __init__(self, name):
@@ -62,10 +58,8 @@ class Warrior(Character):
         self.attack_power += boost
         print(f"{self.name} shouts a battle cry! Attack Power increased by {boost} for the rest of the fight.")
 
-# ------------------------
-# Mage Class
-# ------------------------
 
+# Mage Class
 
 class Mage(Character):
     def __init__(self, name):
@@ -88,10 +82,8 @@ class Mage(Character):
         print(
             f"{self.name} conjures a magical barrier! The next attack will be blocked.")
 
-# ------------------------
-# Archer Class
-# ------------------------
 
+# Archer Class
 
 class Archer(Character):
     def __init__(self, name):
@@ -113,10 +105,8 @@ class Archer(Character):
         self.block_next = True
         print(f"{self.name} prepares to evade the next attack!")
 
-# ------------------------
-# Paladin Class
-# ------------------------
 
+# Paladin Class
 
 class Paladin(Character):
     def __init__(self, name):
@@ -138,10 +128,8 @@ class Paladin(Character):
         self.block_next = True
         print(f"{self.name} raises a divine shield! The next attack will be blocked.")
 
-# ------------------------
-# Evil Wizard Class
-# ------------------------
 
+# Evil Wizard Class
 
 class EvilWizard(Character):
     def __init__(self, name):
@@ -154,10 +142,8 @@ class EvilWizard(Character):
             self.health = self.max_health
         print(f"{self.name} regenerates {regen_amount} health! Current health: {self.health}/{self.max_health}")
 
-# ------------------------
-# Character Creation
-# ------------------------
 
+# Character Creation
 
 def create_character():
     print("Choose your character class:")
@@ -181,10 +167,8 @@ def create_character():
         print("Invalid choice. Defaulting to Warrior.")
         return Warrior(name)
 
-# ------------------------
-# Battle Function
-# ------------------------
 
+# Battle Function
 
 def battle(player, wizard):
     while wizard.health > 0 and player.health > 0:
@@ -242,10 +226,8 @@ def battle(player, wizard):
         print(
             f"\n🎉 Victory! The wizard {wizard.name} has been defeated by {player.name}! 🎉")
 
-# ------------------------
-# Main Game
-# ------------------------
 
+# Main Game
 
 def main():
     player = create_character()
