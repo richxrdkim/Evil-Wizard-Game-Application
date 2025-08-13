@@ -36,7 +36,6 @@ class Character:
 
 
 # Warrior Class
-
 class Warrior(Character):
     def __init__(self, name):
         super().__init__(name, health=140, attack_power=25)
@@ -60,7 +59,6 @@ class Warrior(Character):
 
 
 # Mage Class
-
 class Mage(Character):
     def __init__(self, name):
         super().__init__(name, health=100, attack_power=35)
@@ -84,7 +82,6 @@ class Mage(Character):
 
 
 # Archer Class
-
 class Archer(Character):
     def __init__(self, name):
         super().__init__(name, health=120, attack_power=20)
@@ -107,7 +104,6 @@ class Archer(Character):
 
 
 # Paladin Class
-
 class Paladin(Character):
     def __init__(self, name):
         super().__init__(name, health=160, attack_power=20)
@@ -130,7 +126,6 @@ class Paladin(Character):
 
 
 # Evil Wizard Class
-
 class EvilWizard(Character):
     def __init__(self, name):
         super().__init__(name, health=150, attack_power=15)
@@ -144,7 +139,6 @@ class EvilWizard(Character):
 
 
 # Character Creation
-
 def create_character():
     print("Choose your character class:")
     print("1. Warrior")
@@ -169,7 +163,6 @@ def create_character():
 
 
 # Battle Function
-
 def battle(player, wizard):
     while wizard.health > 0 and player.health > 0:
         print("\n--- Your Turn ---")
@@ -228,7 +221,6 @@ def battle(player, wizard):
 
 
 # Main Game
-
 def main():
     player = create_character()
     wizard = EvilWizard("The Dark Wizard")
