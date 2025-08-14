@@ -199,6 +199,7 @@ def battle(player, wizard):
         elif choice == '5':
             player.display_stats()
             wizard.display_stats()
+            continue
         else:
             print("Invalid choice. Try again.")
             continue
